@@ -35,6 +35,7 @@ class Microwave {
 		if (thingToBeCooked == null) {
 			System.out.println("Microwave says: there's nothing in the microwave!");
 		} else {
+			thingToBeCooked.kernels = cookTime;
 			for (int i = 0; i < cookTime * 10 + 1; i++) {
 				thingToBeCooked.applyHeat();
 			}
@@ -45,7 +46,7 @@ class Microwave {
 
 public class Popcorn {
 
-	private int kernels = 20;
+	public int kernels = 20;
 	private String flavor;
 	private boolean isCooked = false;
 
@@ -65,7 +66,7 @@ public class Popcorn {
 	public void applyHeat() {
 		pause();
 
-		if (kernels == 0) {
+		if (kernels < 0) {
 			isCooked = true;
 		} else {
 			System.out.println("POP!" + kernels);
