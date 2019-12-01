@@ -36,7 +36,7 @@ public class BinaryConverter implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		labe.setText(convert(txtFil.getText()));
 		frame.pack();
-		JOptionPane.showMessageDialog(null, convert(txtFil.getText()));
+		
 	}
 	
 	String convert(String input) {
